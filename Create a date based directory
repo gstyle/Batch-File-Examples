@@ -1,0 +1,5 @@
+set DateString=%DATE:~4,2%-%DATE:~7,2%-%DATE:~-4%
+set BackupPath=%BackupPath%%DateString%
+IF NOT EXIST "%BackupPath%" (
+  mkdir "%BackupPath%"
+)
