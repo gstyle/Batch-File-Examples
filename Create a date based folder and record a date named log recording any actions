@@ -1,0 +1,20 @@
+c:\
+set DateString=%DATE:~4,2%-%DATE:~7,2%-%DATE:~-4%
+set BackupPath=%BackupPath%%DateString%
+IF NOT EXIST "%BackupPath%" (
+  mkdir "%BackupPath%"
+)
+
+SET LOGFILE="c:\%BackupPath%\%BackupPath%.log"
+call :Logit >> %LOGFILE% 
+exit /b 0
+:Logit
+
+rem Put your code under here
+
+f:
+cd Reports
+copy "Some Report.txt" "c:\Somepath_%BackupPath%"
+
+
+
