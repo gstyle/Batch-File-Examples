@@ -1,4 +1,4 @@
-rem This robocopy script copies all files and all perms from one path to another. It writes to a date/time based log and excludes sysvol.
+rem This robocopy script copies all NEW files and all perms from one path to another. It writes to a date/time based log and excludes sysvol.
 
 set DateTimeString=%DATE:~4,2%-%DATE:~7,2%-%DATE:~-4%-%TIME:~0,2%%TIME:~3,2%%TIME:~6,2%
 set datetimefile="c:\robolog-%datefile%%DateTimeString%.txt"
